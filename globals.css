@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes text-shadow-animation {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.animate-text-shadow {
+  animation: text-shadow-animation 3s ease-in-out infinite;
+}
+
