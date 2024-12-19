@@ -8,3 +8,20 @@ const nextConfig = {
 
 module.exports = nextConfig
 
+module.exports = {
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.ttf$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'static/fonts/',
+        },
+      },
+    });
+    return config;
+  },
+};
+
+
